@@ -1,0 +1,18 @@
+# Copie para servers.yaml (que fica fora do git) e ajuste.
+servers:
+  # Servidor falso para desenvolvimento: roda em qualquer máquina com Python.
+  fake:
+    name: "Servidor Falso (dev)"
+    cwd: "."
+    command: ["python", "tests/fake_server.py", "--start-delay", "3"]
+    stop_timeout: 10
+    start_timeout: 30
+
+  # Exemplo de servidor real (não use o ATM10 enquanto o agente estiver em desenvolvimento).
+  # teste:
+  #   name: "Servidor de Teste"
+  #   cwd: "/home/opc/mc/teste"
+  #   command: ["java", "-Xmx4G", "-jar", "server.jar", "nogui"]
+  #   port: 25566
+  #   stop_timeout: 60
+  #   start_timeout: 300
