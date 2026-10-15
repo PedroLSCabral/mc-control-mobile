@@ -23,14 +23,13 @@ pytest tests/test_manager.py -x   # para no primeiro que falhar
 ruff check . ; ruff format .
 ```
 
-Subir a API (no PowerShell, defina o token antes):
+Subir a API. O `--env-file` carrega o `.env` (token, caminho do servers.yaml e dos logs):
 
 ```powershell
-$env:MC_AGENT_TOKEN = "abc"
-uvicorn app.main:create_app --factory --port 8765
+uvicorn app.main:create_app --factory --env-file .env --port 8765
 ```
 
-Testar com curl (no PowerShell use `curl.exe`):
+Testar com curl, trocando `abc` pelo token do seu `.env` (no PowerShell use `curl.exe`):
 
 ```bash
 curl localhost:8765/health
