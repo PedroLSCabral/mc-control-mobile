@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Agent runtime / secrets
+.env
+agent/servers.yaml
+agent/state.json
+agent/logs/
+
+# Flutter (fase 2)
+app/.dart_tool/
+app/build/
+app/.flutter-plugins*
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
